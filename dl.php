@@ -26,7 +26,7 @@ default:
 }
 
 if ($version) {
-	if (!preg_match('/\d\.\d(\.\d)?(\.\d)?/', $version)) {
+	if (!preg_match('/\d\.\d(\.\d)?(\.\d)?m\d/', $version)) {
 		http_response_code(400);
 		exit;
 	}
@@ -48,20 +48,20 @@ if (!$version) {
 
 switch ($platform) {
 case 'mac':
-	$filename = "Zotero-$version.dmg";
+	$filename = "Jurism-$version.dmg";
 	break;
 
 case 'linux-i686':
 case 'linux-x86_64':
-	$filename = "Zotero-{$version}_$platform.tar.bz2";
+	$filename = "Jurism-{$version}_$platform.tar.bz2";
 	break;
 
 case 'win32':
-	$filename = "Zotero-{$version}_setup.exe";
+	$filename = "Jurism-{$version}_setup.exe";
 	break;
 
 case 'win32-zip':
-	$filename = "Zotero-{$version}_win32.zip";
+	$filename = "Jurism-{$version}_win32.zip";
 	break;
 
 default:
