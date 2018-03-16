@@ -72,8 +72,8 @@ class ClientDownloads {
 		}
 		
 		$shortOS = preg_replace('/^(mac|win|linux).+/', "$1", $os);
-		$updateFull = "Zotero-" . $build["version"] . "-full_" . $os . ".mar";
-		$updatePartial = "Zotero-" . $build["version"] . "-" . $fromVersion . "_" . $os . ".mar";
+		$updateFull = "Jurism-" . $build["version"] . "-full_" . $os . ".mar";
+		$updatePartial = "Jurism-" . $build["version"] . "-" . $fromVersion . "_" . $os . ".mar";
 		$completeHash = false;
 		$partialHash = false;
 		

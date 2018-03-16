@@ -29,42 +29,42 @@ describe("dl.php", function () {
 			var result = await req(
 				url + '?channel=release&platform=mac'
 			);
-			assert.match(result, /client\/release\/5\.0\.[\d]+\/Zotero-5.0\.[\d]+\.dmg$/);
+			assert.match(result, /client\/release\/5\.0\.[\d]+\/Jurism-5.0\.[\d]+\.dmg$/);
 		});
 		
 		it("should offer 5.0 for Mac with from=4.0", async function () {
 			var result = await req(
 				url + '?channel=release&platform=mac&from=4.0'
 			);
-			assert.match(result, /client\/release\/5\.0\.[\d]+\/Zotero-5.0\.[\d]+\.dmg$/);
+			assert.match(result, /client\/release\/5\.0\.[\d]+\/Jurism-5.0\.[\d]+\.dmg$/);
 		});
 		
 		it("should offer 5.0 for Windows by default", async function () {
 			var result = await req(
 				url + '?channel=release&platform=win32'
 			);
-			assert.match(result, /client\/release\/5\.0\.[\d]+\/Zotero-5.0\.[\d]+_setup.exe$/);
+			assert.match(result, /client\/release\/5\.0\.[\d]+\/Jurism-5.0\.[\d]+_setup.exe$/);
 		});
 		
 		it("should offer 5.0 for Windows with from=4.0", async function () {
 			var result = await req(
 				url + '?channel=release&platform=win32&from=4.0'
 			);
-			assert.match(result, /client\/release\/5\.0\.[\d]+\/Zotero-5.0\.[\d]+_setup.exe$/);
+			assert.match(result, /client\/release\/5\.0\.[\d]+\/Jurism-5.0\.[\d]+_setup.exe$/);
 		});
 		
 		it("should offer 5.0 for Linux x86_64 by default", async function () {
 			var result = await req(
 				url + '?channel=release&platform=linux-x86_64'
 			);
-			assert.match(result, /client\/release\/5\.0\.[\d]+\/Zotero-5\.0\.[\d]+_linux-x86_64.tar.bz2$/);
+			assert.match(result, /client\/release\/5\.0\.[\d]+\/Jurism-5\.0\.[\d]+_linux-x86_64.tar.bz2$/);
 		});
 		
 		it("should offer 5.0 for Linux x86_64 with from=4.0", async function () {
 			var result = await req(
 				url + '?channel=release&platform=linux-x86_64&from=4.0'
 			);
-			assert.match(result, /client\/release\/5\.0\.[\d]+\/Zotero-5\.0\.[\d]+_linux-x86_64.tar.bz2$/);
+			assert.match(result, /client\/release\/5\.0\.[\d]+\/Jurism-5\.0\.[\d]+_linux-x86_64.tar.bz2$/);
 		});
 	});
 	
@@ -73,7 +73,7 @@ describe("dl.php", function () {
 			var result = await req(
 				url + '?channel=beta&platform=win32'
 			);
-			assert.ok(result.match(/client\/beta\/5\.0\.[\d]+-beta.+Zotero-5\.0\.[\d]+-beta/));
+			assert.ok(result.match(/client\/beta\/5\.0\.[\d]+-beta.+Jurism-5\.0\.[\d]+-beta/));
 		});
 	});
 });
