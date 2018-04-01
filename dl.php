@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . '/lib/bootstrap.inc.php';
 
+
 if (empty($_GET['platform'])) {
 	http_response_code(400);
 	exit;
@@ -26,7 +27,8 @@ default:
 }
 
 if ($version) {
-	if (!preg_match('/\d\.\d(\.\d)?(\.\d)?m\d/', $version)) {
+        error_log($version);
+	if (!preg_match('/[\d]+\.[\d]+\.[\d]+m[\d]+/', $version)) {
 		http_response_code(400);
 		exit;
 	}
